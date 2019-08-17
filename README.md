@@ -83,7 +83,8 @@ necessary for the UI, and you don't want to overwrite any of them!
 It doesn't have any files with the extension `.log` so use that to be safe.
 
 ## Use the `logging.krl` ruleset to peruse the logs
-Install the ruleset included in this repository into a pico of your choice.
+Install the [`logging` ruleset](https://raw.githubusercontent.com/b1conrad/logging/master/krl/logging.krl)
+included in this repository into a pico of your choice.
 
 Go to that pico's Testing tab, and click the checkbox beside `logging`.
 
