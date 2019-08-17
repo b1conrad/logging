@@ -32,7 +32,7 @@ Determine which log files contain the information of interest using the file
 last-modified dates.
 
 In the examples below, we'll be using the latest log file (the one without a numeric extension).
-Adapt the `cat` portion of the commands to include the log files you actually need.
+Adapt the `cat` portion of the commands to include the log file(s) you actually need.
 
 ## Find the pico_id
 If it is a pico which you still use, but you need to look at earlier log entries,
@@ -40,7 +40,7 @@ you can find the pico_id in the About tab.
 
 If it is a pico which has just been deleted,
 use the command line to search for the pico_id.
-(The command shown here would actually be on a single line):
+(The command shown here must be typed as a single line):
 
 ```
 cat packages/pico-engine/pico-engine.log |
@@ -87,7 +87,7 @@ Install the ruleset included in this repository into a pico of your choice.
 
 Go to that pico's Testing tab, and click the checkbox beside `logging`.
 
-Enter a URL like the one below where prompted, and click the `logging/import` button.
+Enter a URL like the one below where prompted, and click the `fmtLogs` link.
 
 ```
 http://localhost:8080/Bob.log

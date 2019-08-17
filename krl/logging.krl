@@ -1,13 +1,14 @@
 ruleset logging {
   meta {
+    logging off
     shares __testing, fmtLogs
   }
   global {
     __testing = { "queries":
       [ { "name": "__testing" }
-      //, { "name": "entry", "args": [ "key" ] }
+      , { "name": "fmtLogs", "args": [ "url" ] }
       ] , "events":
-      [ { "domain": "logging", "type": "import", "attrs": [ "url" ] }
+      [ //{ "domain": "d1", "type": "t1" }
       //, { "domain": "d2", "type": "t2", "attrs": [ "a1", "a2" ] }
       ]
     }
@@ -32,16 +33,6 @@ ruleset logging {
         .values()
         .reverse()
         .reduce(function(a,x){a.put(x)},{})
-    }
-  }
-  rule do_import {
-    select when logging import
-    pre {
-      map = fmtLogs(event:attr("url"))
-    }
-    send_directive("_txt",{"content":map.encode()})
-    fired {
-      ent:map := map
     }
   }
 }
